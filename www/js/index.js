@@ -49,8 +49,6 @@ var app = {
 };
 
 $(document).ready(function(){
-    countSet();
-
     document.addEventListener("deviceready", pushOnDeviceReady, false);
     function pushOnDeviceReady() {
         //device.uuid;
@@ -79,7 +77,7 @@ $(document).ready(function(){
             function onDeviceReady() {
                 try
                 {
-                    pushNotification = window.plugins.PushNotification;
+                    pushNotification = window.plugins.pushNotification;
                     $("#app-status-ul").append('<li>registering ' + device.platform + '</li>');
                     if (device.platform == 'android' || device.platform == 'Android' ||
                         device.platform == 'amazon-fireos' ) {
