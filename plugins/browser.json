@@ -13,7 +13,7 @@
         "cordova-plugin-device": {
             "PACKAGE_NAME": "com.kspstore.start"
         },
-        "SocialSharing-PhoneGap-Plugin": {
+        "SocialSharing": {
             "PACKAGE_NAME": "com.kspstore.start"
         }
     },
