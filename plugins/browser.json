@@ -15,9 +15,6 @@
         },
         "SocialSharing-PhoneGap-Plugin": {
             "PACKAGE_NAME": "com.kspstore.start"
-        },
-        "PushPlugin": {
-            "PACKAGE_NAME": "com.kspstore.start"
         }
     },
     "dependent_plugins": {}
