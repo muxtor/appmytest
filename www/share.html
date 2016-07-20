@@ -9,6 +9,19 @@
     <script src="cordova.js"></script>
     <script src="kendo/js/jquery.min.js"></script>
     <script src="kendo/js/kendo.mobile.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            document.addEventListener("deviceready", function() {
+                // Here you can use it:
+                var sharing = window.plugins.socialsharing;
+                $('.shareMessage').click(function () {
+                    sharing.share('The message', 'The subject', null, null);
+                })
+
+            }, false);
+        })
+
+    </script>
 
 
 </head>
@@ -48,8 +61,8 @@
 
         <div class="demo">
             <h3>Share via Custom</h3>
-            <button class="button" onclick="window.plugins.SocialSharing.share('The message', 'The subject', null, null);">Share message and subject</button>
-            <button class="button" onclick="window.plugins.SocialSharing.shareViaWhatsApp ('The message', null, null, this.onSuccess, this.onError);">Share via Whatsapp</button>
+            <button class="button shareMessage">Share message and subject</button>
+            <button class="button" onclick="sharing.shareViaWhatsApp ('The message', null, null, this.onSuccess, this.onError);">Share via Whatsapp</button>
             <h3>Share via any available app</h3>
             <button data-role="button" class="button" data-bind="click: shareMessageAndSubject">Message and subject</button>
             <button data-role="button" class="button" data-bind="click: shareImage">Image</button>
